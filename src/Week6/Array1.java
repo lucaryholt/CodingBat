@@ -3,9 +3,7 @@ package Week6;
 public class Array1 {
 
     public boolean firstLast6(int[] nums) {
-        if(nums[0] == 6){
-            return true;
-        } else return nums[(nums.length - 1)] == 6;
+        return nums[0] == 6 || nums[(nums.length - 1)] == 6;
     }
 
     public boolean sameFirstLast(int[] nums) {
