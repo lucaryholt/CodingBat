@@ -39,4 +39,24 @@ public class String1 {
         return str.substring(1, (str.length() - 1));
     }
 
+    public String comboString(String a, String b) {
+        if(a.length() > b.length()){
+            return b + a + b;
+        }
+        return a + b + a;
+    }
+
+    public boolean hasBad(String str) {
+        if(str.length() < 3) return false;
+
+        if(str.substring(0, 3).equals("bad")) return true;
+
+        if(str.length() < 4) return false;
+
+        if(str.substring(1, 4).equals("bad")) return true;
+
+        return false;
+    }
+
+
 }
