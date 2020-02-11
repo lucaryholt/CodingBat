@@ -74,8 +74,65 @@ public class Logic1 {
         return n <= 1 || n >= 10;
     }
 
+    public boolean specialEleven(int n) {
+        return n % 11 == 1 || n % 11 == 0;
+    }
 
+    public boolean more20(int n) {
+        return n % 20 == 1 || n % 20 == 2;
+    }
 
+    public boolean old35(int n) {
+        if(n % 3 == 0 && n % 5 == 0){
+            return false;
+        } else if(n % 3 == 0 || n % 5 == 0){
+            return true;
+        }
+        return false;
+    }
 
+    public boolean less20(int n) {
+        return n % 20 == (20 - 1) || n % 20 == (20 - 2);
+    }
+
+    public boolean nearTen(int num) {
+        return num % 10 == 1 || num % 10 == 2 || num % 10 == (10 - 1) || num % 10 == (10 - 2) || num % 10 == 0;
+    }
+
+    public int teenSum(int a, int b) {
+        int sum = a + b;
+        if((a >= 13 && a <= 19) || (b >= 13 && b <= 19)){
+            return 19;
+        }
+        return sum;
+    }
+
+    public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+        if(isMorning){
+            return !isAsleep && isMom;
+        }
+        return !isAsleep;
+    }
+
+    public int teaParty(int tea, int candy) {
+        if(tea < 5 || candy < 5){
+            return 0;
+        } else if(tea / candy >= 2 || candy / tea >= 2){
+            return 2;
+        }
+        return 1;
+    }
+
+    public String fizzString(String str) {
+        String str0 = str.toLowerCase();
+        if(str0.startsWith("f") && str0.endsWith("b")){
+            return "FizzBuzz";
+        } else if(str0.startsWith("f")){
+            return "Fizz";
+        } else if(str0.endsWith("b")){
+            return "Buzz";
+        }
+        return str;
+    }
 
 }
